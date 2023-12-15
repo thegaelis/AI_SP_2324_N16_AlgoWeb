@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (input === null) {
             error.innerHTML =
                 "<i class='fas fa-exclamation-circle'></i>" +
-                "You must choose an option to remove nodes";
+                "Chọn lựa chọn xoá nút";
             error.firstChild.style.animation =
                 "highlightNode .8s ease";
             return;
@@ -77,7 +77,15 @@ document.addEventListener('DOMContentLoaded', function() {
     let removeDataBtn = document.getElementById("remove-data-btn");
     let menuAnimationTimeout = 800;
 
-
+    //Find button
+    document.getElementById('find-btn').addEventListener('click', function() {
+        let userInput = getUserInput(this.parentNode);
+        findRecursively(userInput.data);
+    });
+    //Traverse button
+    document.getElementById('traverse-btn').addEventListener('click', function() {
+        traverseRecursively();
+    });
     // Stack & Queue
 
     // enQueue Button

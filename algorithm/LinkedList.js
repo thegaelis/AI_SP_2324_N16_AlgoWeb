@@ -23,7 +23,7 @@ let errorCircle = '<i class="fas fa-exclamation-circle"></i> ';
 
 function handleEmptyListError() {
     if (nodes.length === 0) {
-        error.innerHTML = errorCircle + " List is empty";
+        error.innerHTML = errorCircle + " Danh sách rộng";
         error.firstChild.style.animation = "highlightNode .8s ease"; 
         return true;
     }
@@ -36,11 +36,11 @@ function checkInputErrors(input, type, endsAtLastNode = false) {
     let end = endsAtLastNode ? nodes.length - 1 : nodes.length;
 
     if (isNaN(input)) {
-        error.innerHTML =  errorCircle + type + " must be a number";
+        error.innerHTML =  errorCircle + type + " phải là số";
         inputError = true;
     }
     else if (type === "Index" && (input > end || input < 0)) {
-        error.innerHTML = errorCircle + "Index Out Of Bounds";
+        error.innerHTML = errorCircle + "Vị trí nằm ngoài danh sách";
         inputError = true;
     }
 
@@ -261,6 +261,34 @@ async function removeRecursively(i, data) {
 		removeRecursively(i + 1, data);
     }
 }
+async function findRecursively(data) {
+    let i = 0;
+    if (i >= nodes.length) {
+        error.innerHTML = 'Không có'+ data+ 'trong danh sách';
+        return;
+    }
+    else if (nodes[i].firstChild.innerHTML == data) {
+        error.innerHTML =  data+ ' được tìm thấy';
+    }
+    else {
+        await animateNode(i);
+		await animatePointer(i);
+		findRecursively(i + 1, data);
+    }
+}
+async function traverseRecursively() {
+    let i = 0;
+    if (i >= nodes.length) {
+        return;
+    }
+    await animateNode(i);
+	await animatePointer(i);
+    error.innerHTML = data;
+	traverseRecursively(i + 1, data);
+}
+
+
+
 async function enQueue(data) {
     // Không cần kiểm tra lỗi cho việc thêm vào cuối hàng đợi
 
