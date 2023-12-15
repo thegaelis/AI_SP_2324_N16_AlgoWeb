@@ -5,12 +5,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-		<link rel="icon" href="img/pointer.png"/>
+		<link rel="icon" href="assets/img/pointer.png"/>
 
-		<link rel="stylesheet" href="vendor/css/normalize.css" />
+		<link rel="stylesheet" href="assets/css/normalize.css" />
         
-		<link rel="stylesheet" href="css/style.css" />
-		<link rel="stylesheet" href="css/responisve.css" />
+		<link rel="stylesheet" href="assets/css/linkedlist.css" />
+		<link rel="stylesheet" href="assets/css/responisve.css" />
         <title>AlgoWeb - Minh hoạ danh sách liên kết</title>
         <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;display=swap">
@@ -28,23 +28,23 @@
 				<div id="close-menu">
 					<i class="fas fa-times"></i>
 				</div>
-				<div><h2>Settings</h2></div>
+				<div><h2>Cài đặt</h2></div>
 			</div>
 
 			<div class="settings-container">
 					<div>
-						<p>Node Animation Speed: </p>
-						<input type="number" placeholder="Miliseconds" />
+						<p>Tốc độ của nút </p>
+						<input type="number" placeholder="Mi - li giây" />
 					</div>
 		
 					<div>
-						<p>Pointer Animation Speed: </p>
-						<input type="number" placeholder="Miliseconds" />
+						<p>Tốc độ con trỏ </p>
+						<input type="number" placeholder="Mi - li giây" />
 					</div>
 
 					<div>
-						<p>Delete Animation Speed: </p>
-						<input type="number" placeholder="Miliseconds" />
+						<p>Tốc độ xoá: </p>
+						<input type="number" placeholder="Mi - li giây" />
 					</div>
 
 					<div class="error-message">
@@ -55,7 +55,7 @@
 						<p id="succes"></p>
 					</div>
 		
-					<button id="save-settings">Save</button>
+					<button id="save-settings">Lưu</button>
 			</div>			
 		</div>
 
@@ -86,34 +86,39 @@
 				<div class="error-message">
 					<p id="error"></p>
 				</div>
-                <div class="massage-box">
-					<h2>Pseudo code runner</h2>
-					<div class="massage"></div>
-				</div>
 			</section>
 
 			<section class="operations">
-				<div class="wrapper">
+				<div class="wrapper bg-light p0">
 					<div>
-						<button class="button" id="set-btn">Set</button>
-						<input type="number" placeholder="Index" />
+						<button class="button" id="set-btn">Chỉnh sửa node</button>
+						<input type="number" placeholder="Vị trí" />
 						<input type="number" placeholder="Data" />
 					</div>
 
 					<div>
-						<button class="button" id="insert-btn">Insert</button>
-						<input type="number" placeholder="Index" />
+						<button class="button" id="insert-btn">Chèn</button>
+						<input type="number" placeholder="Vị trí" />
 						<input type="number" placeholder="Data" />
 					</div>
 
 					<div>
-						<button class="button" id="add-btn">Add</button>
+						<button class="button" id="add-btn">Thêm</button>
+						<input type="number" placeholder="Data" />
+					</div>
+
+					<div>
+						<button class="button" id="add-btn">Duyệt DSLK</button>
+					</div>
+
+					<div>
+						<button class="button" id="add-btn">Tìm kiếm phần tử</button>
 						<input type="number" placeholder="Data" />
 					</div>
 
 					<div>
 						<div class="remove">
-							<button class="button" id="remove-btn">Remove</button>
+							<button class="button" id="remove-btn">Xoá</button>
 							<button class="button" id="remove-settings">
 								<i class="fas fa-cog"></i>
 							</button>
@@ -132,11 +137,14 @@
 				</div>
 			</section>
 		</main>
-
-		<script src="vendor/js/fontawesome.js"></script>
-		<script src="js/LinkedList.js"></script>
-		<script src="js/main.js"></script>
-		<script src="js/theme.js"></script>
-		<script src="js/settings.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/js/aos.min.js"></script>
+        <script src="assets/js/bs-init.js"></script>
+        <script src="assets/js/grayscale.js"></script>
+		<script src="assets/js/fontawesome.js"></script>
+		<script src="algorithm/LinkedList.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script src="assets/js/settings.js"></script>
+		<script src="assets/js/theme.js"></script>
 	</body>
 </html>

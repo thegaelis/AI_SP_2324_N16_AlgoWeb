@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		
+        <script src="assets/js/p5.min.js"></script>
+        <script type="text/javascript">
+            new p5(); // On-demand global mode to use color() outside of setup
+        </script>
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <meta charset="utf-8">
+
+		<link rel="icon" href="assets/img/pointer.png"/>
+
+		<link rel="stylesheet" href="assets/css/normalize.css" />
+        
+		<link rel="stylesheet" href="assets/css/linkedlist.css" />
+		<link rel="stylesheet" href="assets/css/responisve.css" />
+        <title>AlgoWeb - Minh hoạ Stack & Queue sử dụng DSLK</title>
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin:700&amp;display=swap">
+        <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/css/Animation-Cards-_app.css">
+        <link rel="stylesheet" href="assets/css/Animation-Cards.css">
+
+        <title>Binary Tree Visualization</title>
+    </head>
+	
+    <body>
+		<header>
+			<div class="header-container">
+				
+                <nav class="navbar navbar-expand-md fixed-top navbar-light" id="mainNav">
+                    <div class="container">
+                        <a class="navbar-brand ms-3" href="index.html" style="font-size: 20px;color: rgb(30,187,27);"><span style="color: rgb(255, 255, 255);">Alg</span>o<span style="color: rgb(255, 255, 255);">web</span></a><button data-bs-toggle="collapse" class="navbar-toggler navbar-toggler-right" data-bs-target="#navbarResponsive" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" value="Menu"><i class="fa fa-bars"></i></button>
+                        <div class="collapse navbar-collapse" id="navbarResponsive">
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item nav-link"><a class="nav-link" href="linked_list.html">Danh sách liên kết</a></li>
+                                <li class="nav-item nav-link"><a class="nav-link" href="stack_queuell.html">Stack &amp; Queue sử dụng dslk</a></li>
+                                <li class="nav-item nav-link"><a class="nav-link active" href="binary_tree.html">Cây nhị phân tìm kiếm</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+		</header>
+
+        <script src="assets/js/Node.js"></script>
+        <script src="algorithm/Tree.js"></script>
+        <script src="assets/js/Controls.js"></script>
+        <script src="assets/js/Explorer.js"></script>
+        <script src="assets/js/sketch.js"></script>
+
+		<div id = "canvas-placeholder"></div>
+		<div id = "controls">
+            <button class="btn btn-success rounded" id = "clear-btn">Reset</button>
+            <button class="btn btn-success rounded" id = "quick-fill-btn">Sinh lá nhanh</button>
+            <button class="btn btn-success rounded" id = "slow-fill-btn">Sinh lá từng bước</button>
+            <button class="btn btn-success rounded" id = "add-btn">Thêm lá</button>
+            <button class="btn btn-success rounded" id = "search-btn">Tìm</button>
+            <span id = "speed-label">Tốc độ thuật toán:</span>
+            <input id = "speed-slider" type="range" min = "0" max = "1.5" step = "0.1" value = "0.3"></input>
+        </div>
+
+    </body>
+</html>
