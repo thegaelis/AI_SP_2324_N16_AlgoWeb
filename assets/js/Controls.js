@@ -57,7 +57,7 @@ class Controls {
     // Called by event listeners to run a certain animation if one is not running
     triggerAnimation(animation) {
         if(this.tree.running) {
-            alert('Please wait for the current animation to finish');
+            alert('Vui lòng đợi cho thuật toán hoàn thành');
         } else {
             // Bind the animation here so it doesn't have to be bound as an argument
             animation.bind(this)();
@@ -73,7 +73,7 @@ class Controls {
         if(value === null) {
             return null;
         } else if(isNaN(parseInt(value)) || value === "" || parseInt(value) < 0) {
-            alert('Please enter a positive integer');
+            alert('Nhập số dương');
             return null;
         } else {
             return parseInt(value);
@@ -82,30 +82,30 @@ class Controls {
 
     // Method for the Quick Fill animation
     quickFill() {
-        var count = this.getNumber("Number of nodes: ");
+        var count = this.getNumber("Nhập số lương node: ");
 
         if(count !== null && (count < Controls.NODELIMIT ||
-                confirm(count + ' nodes may reduce performance. Continue anyways?'))) {
+                confirm(count + ' node có thể mất thời gian. Chọn OK để tiếp tục thực hiện'))) {
             this.tree.fill(count);
         }
     }
 
     // Method for the Fill animation
     slowFill() {
-        var count = this.getNumber("Number of nodes: ");
+        var count = this.getNumber("Số lượng node: ");
 
         if(count !== null && (count < Controls.NODELIMIT ||
-                confirm(count + ' nodes may reduce performance. Continue anyways?'))) {
+                confirm(count + ' node có thể mất thời gian. Chọn OK để tiếp tục thực hiện'))) {
             this.tree.fillVisual(count);
         }
     }
 
     // Method for the Add animation
     add() {
-        var value = this.getNumber("Value to add: ");
+        var value = this.getNumber("Nhập số để thêm vào cây : ");
 
         if(value !== null && this.tree.search(value)) {
-            alert(value + ' is already in the tree');
+            alert(value + 'đã có ở trong cậy');
         } else if(value !== null){
             this.tree.addValueVisual(value);
         }
@@ -113,7 +113,7 @@ class Controls {
 
     // Method for the search animation
     search() {
-        var value = this.getNumber("Value to search for: ");
+        var value = this.getNumber("Nhập số để tìm: ");
 
         if(value !== null) {
             this.tree.searchVisual(value)

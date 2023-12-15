@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 succes.innerHTML = null;
                 error.innerHTML = 
                     '<i class="fas fa-exclamation-circle"></i>' +
-                    'Miliseconds cannot be negative';
+                    'Mi li giây không thể là số âm';
                 error.firstChild.style.animation = "highlightNode .8s ease";
                 return;
             }
