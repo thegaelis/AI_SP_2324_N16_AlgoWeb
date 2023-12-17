@@ -34,7 +34,7 @@ push.addEventListener("click", () => {
 	}
 
 	//if the stack is full
-	if (stack.length == 10) {
+	if (stack.length == 5) {
 		input.value = "";
         window.alert("Ngăn xếp đã đầy")
 		setTimeout(() => {

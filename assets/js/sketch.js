@@ -1,7 +1,7 @@
 
 // Controls the size of the visualization. Defaults to full-screen
 var CANVASWIDTH = window.innerWidth;
-var CANVASHEIGHT = 720;
+var CANVASHEIGHT = window.innerHeight;
 
 // Constants for controlling the position of the binary tree
 const TREEX = CANVASWIDTH / 2;     // The x-coordinate of the root node
